@@ -1,0 +1,442 @@
+body {
+  font-family: "microsoft yahei";
+  height: 1000px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3a3c4a;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", DengXian, SimSun, "Segoe UI", Tahoma, Helvetica, sans-serif;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+section {
+  padding: 25px 0 0;
+}
+
+#wd-contact .footer img {
+  display: inline-block;
+}
+
+
+/*改写面包屑组件样式，因为模板都用class，所以用id覆盖*/
+
+
+/*顶部固定栏样式*/
+
+#top_nav,
+#wd_header {
+  background-color: #f1678d;
+  border: none;
+  color: #fff;
+}
+
+#top_nav a {
+  color: rgba(255, 255, 255, .7);
+  font-weight: 600;
+  line-height: 50px;
+  vertical-align: middle;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+#wd_header a {
+  color: #fff;
+}
+
+
+/*改写样式，最好不要改变模板样式*/
+
+#top_nav .nav {
+  width: 100%;
+  float: none;
+}
+
+@media (min-width: 767px) {
+  #top_nav .nav li {
+    position: relative;
+    display: inline-block;
+    float: none;
+    transition: color 0.2s ease-out;
+  }
+  #top_nav .nav a::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 3px;
+    left: 50%;
+    margin-left: -10px;
+    bottom: 10px;
+    opacity: 0;
+    font-size: 0px;
+    background-color: #fff;
+    transition: all 0.2s ease-out;
+  }
+}
+
+#top_nav .nav li:hover a {
+  color: #fff;
+}
+
+#top_nav .nav li:hover a::after {
+  bottom: 20px;
+  opacity: 1;
+}
+
+#nav_list #logo:hover a::after {
+  display: none;
+}
+
+#nav_list #logo {
+  vertical-align: middle;
+}
+
+#nav_list h1 {
+  font-size: 64px;
+  color: #fff;
+  margin-top: 0;
+  transition: font-size 0.3s ease-out;
+}
+
+#nav_list #logo span {
+  font-size: 90%;
+  position: relative;
+  top: 15px;
+}
+
+
+/*当屏幕滚动固定导航栏样式*/
+
+#top_nav.scrollimation {
+  background-color: #fff;
+}
+
+#top_nav.scrollimation a {
+  color: rgba(0, 0, 0, .6);
+  padding-top: 0;
+}
+
+#top_nav.scrollimation a h1 {
+  font-size: 52px;
+  color: rgba(0, 0, 0, .7);
+}
+
+#top_nav.scrollimation .container {
+  padding: 0 5px;
+  transition: padding 0.3s ease-out;
+}
+
+#top_nav.scrollimation .nav a::after {
+  background-color: #000;
+}
+
+#top_nav.scrollimation .nav li:hover a {
+  color: #000;
+}
+
+#top_nav.scrollimation h1:hover {
+  color: #f1678d;
+}
+
+@media (max-width: 767px) {
+  #top_nav {
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+  }
+  #top_nav .container {
+    padding: 15px 5px;
+    transition: all 0.2s ease;
+  }
+  #top_nav button {
+    margin-top: 13px;
+  }
+  #top_nav a {
+    color: #777;
+    height: 54px;
+    line-height: 54px;
+  }
+  #top_nav .nav li:hover a {
+    color: #f1678d;
+  }
+  #top_nav #nav_list {
+    border-top: none;
+  }
+}
+
+
+/*首屏样式*/
+
+#wd_header {
+  padding: 180px 0 80px;
+  overflow: hidden;
+}
+
+#wd_header h2 {
+  font-weight: 600;
+  font-size: 62px;
+  margin-top: 0;
+}
+
+#wd_header p {
+  font-size: 32px;
+  line-height: 35px;
+}
+
+
+/*新添按钮组件*/
+
+.btn-active {
+  margin: 20px 0;
+  height: 52px;
+  line-height: 46px;
+  opacity: 0.8;
+  background-color: #94daf0;
+  padding: 0 40px;
+  border-radius: 26px;
+  font-size: 32px;
+}
+
+.btn-active:hover {
+  opacity: 1;
+}
+
+.btn-make {
+  background-color: #f1678d;
+  border-radius: 25px;
+  padding: 10px 30px;
+  color: #fff;
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+.btn-make:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+
+/*轮播图组件样式*/
+
+#wd_header #carousel {
+  position: absolute;
+  left: 50%;
+  /*margin-left: -225px;*/
+  top: 10px;
+}
+
+#wd_header .imac-frame {
+  position: relative;
+  margin: 0 auto;
+}
+
+#carousel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#carousel .item {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#carousel .item img {
+  display: inline-block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+/*我要制作模块和特点模块hover的动画公用*/
+
+.icon {
+  transition: transform 0.3s ease-out;
+}
+
+.icon:hover {
+  transform: translateY(-10px);
+}
+
+
+/*我要制作模块和特点模块hover的动画公用*/
+
+
+/*我要制作*/
+
+section.wd-manufacture {
+  padding: 0;
+}
+
+.wd-manufacture .icon {
+  margin: 30px 15px;
+}
+
+.container .ani-list .list-item p {
+  margin: 20px 0;
+}
+
+
+/*特点*/
+
+.wd-feature h3 {
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.wd-feature h3:hover {
+  color: #f1678d;
+}
+
+
+/*如何制作*/
+
+.ani-scale .tit {
+  font-size: 48px;
+}
+
+.ani-scale .cont {
+  font-size: 16px;
+  margin: 20px 0 75px;
+}
+
+
+/*制作教程定位*/
+
+.ani-trans {
+  position: relative;
+}
+
+.ani-trans .wd-mask:hover img {
+  opacity: 0.5;
+}
+
+.ani-trans .wd-mask .make-video {
+  position: absolute;
+  left: 42%;
+  top: 50%;
+  margin-left: -45px;
+  margin-top: -15px;
+}
+
+.ani-trans .wd-mask:hover .make-video {
+  opacity: 1;
+  left: 50%;
+  top: 50%;
+}
+
+
+/*联系我们*/
+
+.wd-contact {
+  background-color: #94daf0;
+  color: #fff;
+  padding-bottom: 0;
+}
+
+.wd-contact .cont {
+  opacity: 0.7;
+}
+
+.wd-contact .send-msg {
+  margin: 0 0 70px;
+}
+
+.wd-contact .footer {
+  background-color: #1D2026;
+  padding: 20px 0 10px;
+  line-height: 40px;
+}
+
+.wd-contact .footer a {
+  color: #f1678d;
+}
+
+.wd-contact .footer .img-list img {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 12px;
+  transform: translateX(-300px);
+  opacity: 1;
+}
+
+.wd-contact .footer.move img:nth-child(1) {
+  animation: move 0.3s ease .5s forwards;
+}
+
+.wd-contact .footer.move img:nth-child(2) {
+  animation: move 0.3s ease .3s forwards;
+}
+
+.wd-contact .footer.move img:nth-child(3) {
+  animation: move 0.3s ease .1s forwards;
+}
+
+
+/*.wd-contact .footer.move .img-list img{*/
+
+
+/*transform: none;*/
+
+
+/*opacity: 1;*/
+
+
+/*}*/
+
+@media (max-width: 767px) {
+  .wd-contact .footer .img-list div {
+    text-align: center;
+  }
+}
+
+
+/*当屏幕滚动时图标动画*/
+
+@keyframes move {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/*联系我们表单样式*/
+
+.contact-form input {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  outline: none;
+}
+
+.contact-form .fade-in {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.contact-form .fade-in label {
+  width: 100%;
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  text-align: left;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+
+.contact-form .fade-in .move {
+  top: -35px;
+  opacity: 1;
+}
